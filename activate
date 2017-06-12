@@ -107,6 +107,9 @@ def get_appid(path):
 
 def main():
     version = get_steamapi_version_replace_libs('.')
+    if version is None:
+        print("No libsteam_api.so found. Isn't game DRM-free")
+        return
     print(version)
     interfaces = INTERFACES[version]
     appid = get_appid(".")
