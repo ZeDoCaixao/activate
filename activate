@@ -1223,7 +1223,7 @@ INI_TEMPLATE = """[Settings]
 ### Game identifier - http://store.steampowered.com/app/{appid}
 ### Game data is stored at ~/.local/share/Steam/ACTiVATED/{appid}
 AppId={appid}
-UserName=GGn
+UserName=Cracked
 Language=english
 
 [Interfaces]

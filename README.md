@@ -16,5 +16,7 @@ anywhere in yout `$PATH`, e.g. `/usr/local/bin`.
 Go to game directory and enter `activate`. The script may ask for AppID if it
 can't find it. That's it.
 
-````cd ~/Games/SuperSteamGame
-activate````
+````
+cd ~/Games/SuperSteamGame
+activate
+````
