@@ -2,7 +2,7 @@
 Use ACTiVATED crack on Steam game
 
 This script should be used only for fair purposes like making your own backup
-copies of games you own on your account.
+copies of games you own on your account. It not supposed to be used for piracy.
 
 ## Install
 
