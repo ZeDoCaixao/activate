@@ -20,3 +20,7 @@ can't find it. That's it.
 cd ~/Games/SuperSteamGame
 activate
 ````
+
+It will replace libsteam_api.so files with ACTiVATED crack
+(of right architecture), detect a version of Steam interfaces and fill
+activated.ini files with right interfaces section.
