@@ -1238,4 +1238,5 @@ DLCUnlockall=1
 #ID=Name
 """
 
-main()
+if __name__ == "__main__":
+    main()
