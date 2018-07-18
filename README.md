@@ -7,9 +7,9 @@ copies of games you own on your account. It not supposed to be used for piracy.
 ## Install
 
 Copy latest ACTiVATED crack `.so`-files to
-`./local/share/activate/x86/libsteam_api.so` and
-`./local/share/activate/x86_64/libsteam_api.so`. Copy script file (`activate`)
-anywhere in yout `$PATH`, e.g. `/usr/local/bin`.
+`$HOME/.local/share/activate/x86/libsteam_api.so` and
+`$HOME/.local/share/activate/x86_64/libsteam_api.so`. Copy script file (`activate`)
+anywhere in your `$PATH`, e.g. `/usr/local/bin`.
 
 ## Use
 
