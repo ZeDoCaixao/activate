@@ -21,6 +21,7 @@
 ################################################################################
 
 import os
+import json
 from shutil import copyfile
 from hashlib import sha1
 
@@ -30,6 +31,17 @@ def get_crack_path():
     if not dir:
         dir = os.path.join(os.getenv("HOME"), ".local", "share")
     return os.path.join(dir, "activate")
+
+
+def read_config():
+    dir = os.getenv("XDG_CONFIG_HOME")
+    if not dir:
+        dir = os.path.join(os.getenv("HOME"), ".config")
+    try:
+        with open(os.path.join(dir, "activate.json")) as f:
+            return json.load(f)
+    except:
+        return {}
 
 
 def get_file_sha1(path):
@@ -106,6 +118,7 @@ def get_appid(path):
 
 
 def main():
+    config = read_config()
     version = get_steamapi_version_replace_libs('.')
     if version is None:
         print("No libsteam_api.so found. Isn't game DRM-free")
@@ -113,7 +126,11 @@ def main():
     print(version)
     interfaces = INTERFACES[version]
     appid = get_appid(".")
-    ini = INI_TEMPLATE.format(interfaces=interfaces, appid=appid)
+    ini = INI_TEMPLATE.format(
+        interfaces=interfaces,
+        appid=appid,
+        username=config.get("username", "Cracked")
+    )
     with open("activated.ini", "w") as f:
         f.write(ini)
 
@@ -1226,7 +1243,7 @@ INI_TEMPLATE = """[Settings]
 ### Game identifier - http://store.steampowered.com/app/{appid}
 ### Game data is stored at ~/.local/share/Steam/ACTiVATED/{appid}
 AppId={appid}
-UserName=Cracked
+UserName={username}
 Language=english
 
 [Interfaces]
