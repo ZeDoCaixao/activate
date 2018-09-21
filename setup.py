@@ -5,10 +5,11 @@ from setuptools import setup
 
 setup(
     name="activate",
-    version="0.1.0",
-    author="ZeDoCaixao",
+    version="0.2.1",
+    author="Ale & ZeDoCaixao",
     description="Replace libsteam_api.so with an ACTiVATED one",
-    url="https://github.com/ZeDoCaixao/activate",
+    long_description=open("README.rst").read(),
+    url="https://github.com/notpushkin/activate",
     py_modules=["activate"],
     entry_points="""
         [console_scripts]
